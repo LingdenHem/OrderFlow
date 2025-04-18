@@ -70,7 +70,7 @@ app.post("/api/food", (req: Request, res: Response) => {
 app.get("/api/food", async (req: Request, res: Response) => {
   try {
     const foodItems = await Food.find();
-    res.json(foodItems);
+    res.status(200).json({ data: foodItems });
   } catch (error) {
     console.log("error in fetching the foodItems");
     res.status(500).json({ sucess: false, message: "Server error" });
