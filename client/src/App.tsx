@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function App() {
-  const [cart, setCart] = useState(0);
   return (
     <div className=" flex justify-center m-auto mt-14  w-[800px]">
       <div className=" grid grid-cols-3 justify-items-center gap-6 ">
@@ -29,9 +28,6 @@ function App() {
         <Link to="/">
           <div className="h-[200px] w-[200px] bg-blue-400"></div>
         </Link>
-      </div>
-      <div>
-        <p>Varukorg{cart}</p>
       </div>
     </div>
   );
